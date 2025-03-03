@@ -2,7 +2,6 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    /* overflow: hidden; */
 }
 
 .slider{
@@ -10,7 +9,8 @@
     height: 100vh;
     margin: auto;
     display: flex;
-    transition: opacity 0.5s;`
+    transition: opacity 0.5s;
+    position: relative;
     
 }
 
@@ -41,4 +41,70 @@
 
 .active{
     display: block;
+}
+
+
+.prev{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.prev:hover{
+    background-color: hsl(0, 40%, 89%);
+}
+
+
+.next{
+   height: 50px;
+   width: 50px;
+   border-radius: 50px;
+   border: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: white;
+}
+
+.next:hover{
+    background-color: hsl(0, 40%, 89%); 
+}
+
+
+
+.bx-chevron-left{
+   font-size: 30px;
+}
+
+.bx-chevron-right{
+    font-size: 30px;
+}
+
+.indicators{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 10px;
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indicator{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    border: 2px solid;
+    cursor: pointer;
+}
+
+.indicator.active{
+    background-color: greenyellow
+
 }

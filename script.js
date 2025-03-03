@@ -1,5 +1,6 @@
 let slidecontainer = document.querySelector(".slider");
 let slides = document.querySelectorAll(".slider-item ");
+let indicators = document.querySelectorAll('.indicator')
 
 let currentSlide = 0;
 
@@ -25,8 +26,19 @@ function showSlides(index){
        }
      });
 
+     indicators.forEach((indicator,index) => {
+        indicator.classList.remove('active');
+        if(index === currentSlide){
+            indicator.classList.add('active');
+        }
+     });
+
 }
 
 function changeSlide(direction){
     showSlides(currentSlide + direction);
 }
+
+setInterval(() => {
+    changeSlide(1);
+}, 5000);

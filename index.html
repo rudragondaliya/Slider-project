@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>slider</title>
   </head>
   <body>
@@ -18,11 +19,27 @@
         <div class="slider-item d-none">
           <img src="./img/nike-3-img.webp" alt="" />
         </div>
+        <div class="slider-item d-none">
+          <img src="./img/WhatsApp Image 2025-03-01 at 10.53.39 PM.jpeg" alt="" />
+        </div>
+        <div class="slider-item d-none">
+          <img src="./img/WhatsApp Image 2025-03-01 at 10.53.41 PM.jpeg" alt="" />
+        </div>
       </section>
-      <section>
-        <button class="prev" onclick="changeSlide(-1)">prev</button>
-        <button class="next" onclick="changeSlide(1)">next</button>
+      <section class="btns">
+        <button class="prev" onclick="changeSlide(-1)"><i class='bx bx-chevron-left'></i></button>
+        <button class="next" onclick="changeSlide(1)"><i class='bx bx-chevron-right' ></i></button>
       </section>
+
+     <section class="indicators">
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+     </section>
+
+
     </main>
 
     <script src="./script.js"></script>
